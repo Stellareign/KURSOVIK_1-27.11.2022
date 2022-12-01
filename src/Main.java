@@ -2,7 +2,7 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Курсовая работа №1. ИП + 'Рога и копыта М+'");
+        System.out.println("Курсовая работа №1. Базовая часть.");
 
         Employee[] employeeList = new Employee[10]; // создаём массив с данными сотрудников из стринга
 
