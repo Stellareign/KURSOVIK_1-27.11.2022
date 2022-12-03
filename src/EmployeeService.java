@@ -27,7 +27,7 @@ public class EmployeeService {
         return minSalary;
     }
 
-    public static double findMaxSalary(Employee[] employeeList) {
+    public static double findMaxSalary(Employee[] employeeList) { // максимальная зарплата
         double maxSalary = 0;
         int j = 0;
         for (int i = 0; i < employeeList.length; i++) {
@@ -61,10 +61,11 @@ public class EmployeeService {
         return averageSalary;
     }
 
-    public static void fullNameEmployee(Employee[] employeeList) {
-        for (int i = 0; i < employeeList.length; i++) {
+    public static void fullNameEmployee(Employee[] employeeList) { // вывод ФИО
+
+        for (int i = 1; i < employeeList.length; i++) {
             if (employeeList[i] != null) {
-                String name = (i + 1) + ". " + employeeList[i].getEmployeeSurname() + " " + employeeList[i].getEmployeeFirstName() + " " + employeeList[i].getEmployeeSecondName();
+                String name = i + ". " + employeeList[i].getEmployeeSurname() + " " + employeeList[i].getEmployeeFirstName() + " " + employeeList[i].getEmployeeSecondName();
                 System.out.print("\n" + name);
             }
         }
