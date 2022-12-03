@@ -13,7 +13,7 @@ public class EmployeeService {
     }
 
     public static double findMinSalary(Employee[] employeeList) {
-        double minSalary = employeeList[0].getSalary(); // присваиваем первое значение из списка
+        double minSalary = 0; // присваиваем первое значение из списка
         int j = 0; // задаём переменную для запоминания индекса мин. зарплаты
         for (int i = 1; i < employeeList.length; i++) {
             if (employeeList[i] != null) { // проверка на пустую ячейку
