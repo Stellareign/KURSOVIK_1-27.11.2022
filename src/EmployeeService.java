@@ -11,7 +11,7 @@ public class EmployeeService {
 //        System.out.println("Сумма затрат на зарплату составила: " + sumSalary + " руб." + "\n");
         return sumSalary;
     }
-    //Печать суммы. Если печать в методе суммы, идёт задвоение вывода... Почему????
+    //Печать суммы. Если печать в методе суммы, идёт задвоение вывода... Почему???? :
     public static void printSumSalary (Employee[] employeeList) {
         System.out.println("Сумма затрат на зарплату составила: " + calcSumSalary(employeeList) + " руб." + "\n");
     }
@@ -85,11 +85,13 @@ public class EmployeeService {
 
     // Печатаем список по ФИО:
     public static void fullNameEmployee(Employee[] employeeList) { // вывод ФИО
-
+        int count = 1; // счётчик по порядку в списке.
         for (int i = 0; i < employeeList.length; i++) {
+
             if (employeeList[i] != null) {
-                int id = employeeList[i].getId(); // добавлено, чтобы нумерация списка была по порядку. Как сделать без привязки к ID?
-                String name = id + ". " + employeeList[i].getEmployeeSurname() + " " + employeeList[i].getEmployeeFirstName() + " " + employeeList[i].getEmployeeSecondName();
+                int j = count;
+                count++;
+                String name = j + ". " + employeeList[i].getEmployeeSurname() + " " + employeeList[i].getEmployeeFirstName() + " " + employeeList[i].getEmployeeSecondName();
                 System.out.print("\n" + name);
             }
         }
