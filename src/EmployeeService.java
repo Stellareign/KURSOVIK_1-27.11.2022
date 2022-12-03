@@ -38,7 +38,7 @@ public class EmployeeService {
                 }
             }
         }
-        System.out.println("У сотрудника " + employeeList[j] + " максимальная зарплата" +"\n");
+        System.out.println("У сотрудника " + employeeList[j] + " максимальная зарплата" + "\n");
         return maxSalary;
     }
 
@@ -49,7 +49,7 @@ public class EmployeeService {
     }
 
     public static double calcAverageSalary(Employee[] employeeList) { // вычисление средней зарплаты
-        double  averageSalary;
+        double averageSalary;
         int salaryCount = 0;
         for (int i = 0; i < employeeList.length; i++) {
             if (employeeList[i] != null) {
@@ -60,11 +60,14 @@ public class EmployeeService {
         System.out.println("Средняя зарплата составляет " + averageSalary + " руб." + "\n");
         return averageSalary;
     }
+
     public static void fullNameEmployee(Employee[] employeeList) {
         for (int i = 0; i < employeeList.length; i++) {
-            String name = (i+1) + ". " + employeeList[i].getEmployeeSurname() + " " + employeeList[i].getEmployeeFirstName() + " " + employeeList[i].getEmployeeSecondName();
-            System.out.print("\n" + name);
+            if (employeeList[i] != null) {
+                String name = (i + 1) + ". " + employeeList[i].getEmployeeSurname() + " " + employeeList[i].getEmployeeFirstName() + " " + employeeList[i].getEmployeeSecondName();
+                System.out.print("\n" + name);
+            }
         }
-    }
 
+    }
 }

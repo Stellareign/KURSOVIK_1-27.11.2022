@@ -6,7 +6,7 @@ public class Main {
 
         Employee[] employeeList = new Employee[10]; // создаём массив с данными сотрудников из стринга
 
-        employeeList[0] = new Employee("Кокорина", "Марина", "Андреевна", 1, "Ведущий технолог", 63500);
+        employeeList[0] = null;
         employeeList[1] = new Employee("Рогожкин", "Илья", "Сергеевич", 1, "Технолог 1 категории", 56200);
         employeeList[2] = new Employee("Замятина", "Анна", "Александровна", 5, "Водитель", 45890);
         employeeList[3] = new Employee("Малинина", "Мария", "Владимировна", 1, "Начальник отдела", 93600);
