@@ -1,7 +1,7 @@
 public class EmployeeService {
 
- // Считаем сумму зарплат:
-    public static double  calcSumSalary(Employee[] employeeList) {
+    // Считаем сумму зарплат:
+    public static double calcSumSalary(Employee[] employeeList) {
         double sumSalary = 0;
         for (int i = 0; i < employeeList.length; i++) {
             if (employeeList[i] != null) {
@@ -12,7 +12,7 @@ public class EmployeeService {
         return sumSalary;
     }
 
- //Ищем минималку:
+    //Ищем минималку:
     public static double findMinSalary(Employee[] employeeList) {
         int count = 0;
         for (; count < employeeList.length; ) {
@@ -35,7 +35,7 @@ public class EmployeeService {
         return minSalary;
     }
 
- // Ищем максималку:
+    // Ищем максималку:
     public static double findMaxSalary(Employee[] employeeList) { // максимальная зарплата
         int count = 0;
         for (; count < employeeList.length; ) {
@@ -58,14 +58,14 @@ public class EmployeeService {
         return maxSalary;
     }
 
-// Список сотрудников со всеми данными:
+    // Список сотрудников со всеми данными:
     public static void employeeList1(Employee[] employeeList) {
         for (int i = 0; i < employeeList.length; i++) {
             System.out.println(i + 1 + ". " + employeeList[i]);
         }
     }
 
-// Вычисление средней зарплаты:
+    // Вычисление средней зарплаты:
     public static double calcAverageSalary(Employee[] employeeList) {
         double averageSalary;
         int salaryCount = 0;
@@ -79,11 +79,13 @@ public class EmployeeService {
         return averageSalary;
     }
 
-// Печатаем список по ФИО:
+    // Печатаем список по ФИО:
     public static void fullNameEmployee(Employee[] employeeList) { // вывод ФИО
+
         for (int i = 0; i < employeeList.length; i++) {
             if (employeeList[i] != null) {
-                String name = (i + 1) + ". " + employeeList[i].getEmployeeSurname() + " " + employeeList[i].getEmployeeFirstName() + " " + employeeList[i].getEmployeeSecondName();
+                int id = employeeList[i].getId();
+                String name = id + ". " + employeeList[i].getEmployeeSurname() + " " + employeeList[i].getEmployeeFirstName() + " " + employeeList[i].getEmployeeSecondName();
                 System.out.print("\n" + name);
             }
         }
