@@ -19,7 +19,7 @@ public class Main {
         EmployeeService.findMaxSalary(employeeList); // max зарплата
         EmployeeService.findMinSalary(employeeList); // min зарплата
         EmployeeService.calcSumSalary(employeeList); // сумма зарплат
-        EmployeeService.calcAverageSalary(employeeList); // средняя зарплата
+        EmployeeService.printSumSalary(employeeList); // средняя зарплата
         EmployeeService.employeeList1(employeeList); // список сотрудников со всеми данными
         EmployeeService.fullNameEmployee(employeeList); // список ФИО
 

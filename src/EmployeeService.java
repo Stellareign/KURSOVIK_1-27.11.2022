@@ -8,8 +8,12 @@ public class EmployeeService {
                 sumSalary += employeeList[i].getSalary();
             }
         }
-        System.out.println("Сумма затрат на зарплату составила: " + sumSalary + " руб." + "\n");
+//        System.out.println("Сумма затрат на зарплату составила: " + sumSalary + " руб." + "\n");
         return sumSalary;
+    }
+    //Печать суммы. Если печать в методе суммы, идёт задвоение вывода... Почему????
+    public static void printSumSalary (Employee[] employeeList) {
+        System.out.println("Сумма затрат на зарплату составила: " + calcSumSalary(employeeList) + " руб." + "\n");
     }
 
     //Ищем минималку:
@@ -84,7 +88,7 @@ public class EmployeeService {
 
         for (int i = 0; i < employeeList.length; i++) {
             if (employeeList[i] != null) {
-                int id = employeeList[i].getId();
+                int id = employeeList[i].getId(); // добавлено, чтобы нумерация списка была по порядку. Как сделать без привязки к ID?
                 String name = id + ". " + employeeList[i].getEmployeeSurname() + " " + employeeList[i].getEmployeeFirstName() + " " + employeeList[i].getEmployeeSecondName();
                 System.out.print("\n" + name);
             }
