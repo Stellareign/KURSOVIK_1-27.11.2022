@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Курсовая работа №1. Базовая часть.");
 
-        Employee[] employeeList = new Employee[]{// создаём массив с данными сотрудников из стринга
+        Employee[] employeeList = new Employee[]{// создаём массив с данными сотрудников
 
                 new Employee("Боттер", "Ангелина", "Аркадиевна", 1, "Начальник отдела", 94560),
                 new Employee("Рогожкин", "Илья", "Сергеевич", 1, "Технолог 1 категории", 56200),

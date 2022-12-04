@@ -25,12 +25,6 @@ public class Employee {
         counter++;
     }
 
-    @Override
-    public String toString() {
-        return "Табельный номер сотрудника: " + id + ", ФИО: " + employeeSurname + " " + employeeFirstName + " " + employeeSecondName +
-                ", отдел: " + department + ", " + positionInDepartment + ", оклад: " + salary + " руб."; // выводим ВСЕ данные о сотруднике
-    }
-
     public String getEmployeeFirstName() { // генерим геттеры
         return employeeFirstName;
     }
@@ -78,6 +72,11 @@ public class Employee {
         this.salary = salary;
         return this;
     }
+    @Override
+    public String toString() {
+        return "Табельный номер сотрудника: " + id + ", ФИО: " + employeeSurname + " " + employeeFirstName + " " + employeeSecondName +
+                ", отдел: " + department + ", " + positionInDepartment + ", оклад: " + salary + " руб."; // выводим ВСЕ данные о сотруднике
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -92,6 +91,5 @@ public class Employee {
         return Objects.hash(id); // сравниваем хэш по id
     }
 
-    private static EmployeeService minSalary;
-
+//    private static EmployeeService minSalary;
 }

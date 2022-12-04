@@ -8,7 +8,6 @@ public class EmployeeService {
                 sumSalary += employeeList[i].getSalary();
             }
         }
-//        System.out.println("Сумма затрат на зарплату составила: " + sumSalary + " руб." + "\n");
         return sumSalary;
     }
     //Печать суммы. Если печать в методе суммы, идёт задвоение вывода... Почему???? :
